@@ -1,7 +1,0 @@
-version: '3'
-services:
-  web:
-    image: dev/webapp:latest
-    container_name: webapp-dev
-    ports:
-      - "8888:8888"
