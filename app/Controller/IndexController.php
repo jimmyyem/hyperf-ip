@@ -49,7 +49,5 @@ class IndexController extends AbstractController
         } else {
             return $res['remote_addr'];
         }
-
-        return '';
     }
 }
