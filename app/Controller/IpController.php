@@ -15,14 +15,17 @@ namespace App\Controller;
 use Hyperf\HttpServer\Annotation\Controller;
 use Hyperf\HttpServer\Annotation\GetMapping;
 
-#[Controller(prefix: "index")]
-class IndexController extends BaseController
+#[Controller(prefix: "ip")]
+class IpController extends BaseController
 {
     #[GetMapping('')]
     public function index()
     {
         return $this->success([
+            'ip' => $this->getIpAddress(),
             'time' => date('Y-m-d H:i:s'),
+            'server_params' => $this->request->getServerParams(),
+            'request' => $this->request->all(),
         ]);
     }
 }

@@ -27,4 +27,72 @@ return [
             ],
         ],
     ],
+    'error' => [
+        'handler' => [
+            'class' => Monolog\Handler\RotatingFileHandler::class,
+            'constructor' => [
+                'filename' => BASE_PATH . '/runtime/logs/debug/error.log',
+                'level' => Monolog\Logger::DEBUG,
+            ],
+        ],
+        'formatter' => [
+            'class' => Monolog\Formatter\LineFormatter::class,
+            'constructor' => [
+                'format' => null,
+                'dateFormat' => 'Y-m-d H:i:s',
+                'allowInlineLineBreaks' => true,
+            ],
+        ],
+    ],
+    'store' => [
+        'handler' => [
+            'class' => Monolog\Handler\RotatingFileHandler::class,
+            'constructor' => [
+                'filename' => BASE_PATH . '/runtime/logs/debug/store.log',
+                'level' => Monolog\Logger::DEBUG,
+            ],
+        ],
+        'formatter' => [
+            'class' => Monolog\Formatter\LineFormatter::class,
+            'constructor' => [
+                'format' => null,
+                'dateFormat' => 'Y-m-d H:i:s',
+                'allowInlineLineBreaks' => true,
+            ],
+        ],
+    ],
+    'debug' => [
+        'handler' => [
+            'class' => Monolog\Handler\RotatingFileHandler::class,
+            'constructor' => [
+                'filename' => BASE_PATH . '/runtime/logs/debug/debug.log',
+                'level' => Monolog\Logger::DEBUG,
+            ],
+        ],
+        'formatter' => [
+            'class' => Monolog\Formatter\LineFormatter::class,
+            'constructor' => [
+                'format' => null,
+                'dateFormat' => 'Y-m-d H:i:s',
+                'allowInlineLineBreaks' => true,
+            ],
+        ],
+    ],
+    'sql' => [
+        'handler' => [
+            'class' => Monolog\Handler\RotatingFileHandler::class,
+            'constructor' => [
+                'filename' => BASE_PATH . '/runtime/logs/sql/sql.log',
+                'level' => Monolog\Logger::DEBUG,
+            ],
+        ],
+        'formatter' => [
+            'class' => Monolog\Formatter\LineFormatter::class,
+            'constructor' => [
+                'format' => null,
+                'dateFormat' => 'Y-m-d H:i:s',
+                'allowInlineLineBreaks' => true,
+            ],
+        ],
+    ],
 ];
